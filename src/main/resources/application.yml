@@ -16,7 +16,11 @@ spring:
     hibernate:
       ddl-auto: update
     database: mysql
-
+  servlet:
+    multipart:
+      max-file-size: 10MB # 1개의 파일의 최대 사이즈
+      max-request-size: 20MB # 전체 요청의 최대 사이즈
+  
 # swagger setting
 springdoc:
   swagger-ui:
@@ -24,7 +28,16 @@ springdoc:
 
 jwt:
   secret: g7AzFEIVIjIyK3cDe7AQziOGx2wdOvZkeZQmnsJh1BRDSKpvYjvkvy8GypEoe34pGxYyGI7pSrIQHv0YGtt32Q==
+  refresh-secret: Fr0pg
 
+# upload file path
+upload:
+  path: C:/todo_upload
+
+kakao:
+  client_id: e46b6a9ef5d51111f616f58005ba7f49
+  redirect_url: http://localhost:3000/oauth/kakao
+  client_secret: T36933I6Yauf7HOD3mdrOu8m8lO7949g
 
 
 
